@@ -69,7 +69,7 @@ gem 'devise'
 gem 'pry-byebug'
 
 # bootstrapの導入
-gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-sass', '~> 3.4.1'
 
 # jquery-rails導入
 gem 'jquery-rails'
