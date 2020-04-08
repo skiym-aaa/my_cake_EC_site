@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   devise_for :admins, controllers: {
     sessions:      'admins/sessions',
     passwords:     'admins/passwords',
@@ -10,7 +9,6 @@ Rails.application.routes.draw do
     passwords:     'users/passwords',
     registrations: 'users/registrations'
   }
-
   # ユーザー側のルーティング
   namespace :user do
     root 'users#top' #トップ画面
@@ -24,6 +22,7 @@ Rails.application.routes.draw do
       resources :orders, only:[:index, :create, :new, :show]
       resources :deliveries, only: [:index, :create, :edit, :update, :destroy]
     end
+    get 'genre/:id' => 'products#genre', as:'genre' #ジャンル別画面
     get 'users/orders/:id/confirm' => 'orders#confirm' #注文確認画面
     get 'confirm' => 'users#confirm' #退会確認ページ
     get 'thanks' => 'orders#thanks' #購入完了ページ

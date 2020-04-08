@@ -1,8 +1,8 @@
-class Admin::UsersController < ApplicationController
+class Users::DeliveriesController < ApplicationController
   def index
   end
 
-  def show
+  def create
   end
 
   def edit

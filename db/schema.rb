@@ -84,7 +84,7 @@ ActiveRecord::Schema.define(version: 2020_04_03_132902) do
     t.string "name"
     t.text "explanation"
     t.integer "price"
-    t.float "tax_rate"
+    t.float "tax_rate", default: 1.08
     t.string "image_id"
     t.integer "sales_status"
     t.datetime "created_at", null: false

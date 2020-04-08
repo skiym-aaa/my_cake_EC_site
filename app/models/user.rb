@@ -8,5 +8,5 @@ class User < ApplicationRecord
   has_many :orders
   has_many :deliveries
 
-  enum profile_status:{ 有効: 0, 退会: 1}
+  enum profile_status:[ 有効: 0, 退会: 1]
 end
